@@ -3,9 +3,13 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full',
+    path: 'auth',
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthPageModule),
+  },
+  {
+    path: 'platser',
+    loadChildren: () => import('./pages/platser/platser.module').then( m => m.PlatserPageModule)
   },
 ];
 
