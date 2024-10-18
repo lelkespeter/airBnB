@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'platser',
     loadChildren: () => import('./pages/platser/platser.module').then( m => m.PlatserPageModule)
   },
+  {
+    path: 'bokningar',
+    loadChildren: () => import('./pages/bokningar/bokningar.module').then( m => m.BokningarPageModule)
+  },
 ];
 
 @NgModule({

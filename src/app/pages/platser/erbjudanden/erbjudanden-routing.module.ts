@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'edit-erbjudande',
     loadChildren: () => import('./edit-erbjudande/edit-erbjudande.module').then( m => m.EditErbjudandePageModule)
+  },
+  {
+    path: 'platsbokningar',
+    loadChildren: () => import('./platsbokningar/platsbokningar.module').then( m => m.PlatsbokningarPageModule)
   }
 
 ];
