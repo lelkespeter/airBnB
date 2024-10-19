@@ -69,19 +69,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class PlatserPageRoutingModule {}
-
-// const routes: Routes = [
-//   {
-//     path: '',
-//     component: PlatserPage
-//   },
-//   {
-//     path: 'discover',
-//     loadChildren: () => import('./discover/discover.module').then( m => m.DiscoverPageModule)
-//   },
-//   {
-//     path: 'erbjudanden',
-//     loadChildren: () => import('./erbjudanden/erbjudanden.module').then( m => m.ErbjudandenPageModule)
-//   }
-
-// ];
