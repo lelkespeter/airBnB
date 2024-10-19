@@ -21,7 +21,17 @@
           </ion-card-content>
         </ion-card> -->
         <ion-list>
-          <ion-item *ngFor="let plats of loaddePlaces">
+          <ion-item
+            *ngFor="let plats of loaddePlaces"
+            [routerLink]="[
+            '/',
+            'platser',
+            'tabs',
+            'discover',
+            plats.id
+          ]"
+            detail="true"
+          >
             <ion-thumbnail>
               <img [src]="plats.imageUrl" />
             </ion-thumbnail>
