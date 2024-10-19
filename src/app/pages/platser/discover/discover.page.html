@@ -4,11 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content>
   <ion-grid>
     <ion-row>
       <ion-col class="ion-text-center" size="12" size-sm="8" offset-sm="2">
-        <ion-card>
+        <!-- <ion-card>
           <ion-card-header>
             <ion-card-title>{{loaddePlaces[0].title}} </ion-card-title>
             <ion-card-subtitle
@@ -19,7 +19,19 @@
           <ion-card-content>
             <p>{{loaddePlaces[0].description}}</p>
           </ion-card-content>
-        </ion-card>
+        </ion-card> -->
+        <ion-list>
+          <ion-item *ngFor="let plats of loaddePlaces">
+            <ion-thumbnail>
+              <img [src]="plats.imageUrl" />
+            </ion-thumbnail>
+            <ion-label>
+              <h2>{{plats.title}}</h2>
+              <p>{{plats.description}}</p>
+              <p>{{plats.price|currency}}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
