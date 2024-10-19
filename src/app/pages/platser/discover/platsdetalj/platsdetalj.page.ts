@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-platsdetalj',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./platsdetalj.page.scss'],
 })
 export class PlatsdetaljPage implements OnInit {
+  constructor(private navCtrl: NavController) {}
 
-  constructor() { }
+  // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
+  ngOnInit() {}
 
-  ngOnInit() {
+  onBoka() {
+    this.navCtrl.navigateBack('/platser/tabs/discover');
   }
-
 }
