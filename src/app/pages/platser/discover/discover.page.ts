@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PlatserService } from '../../../services/platser.service';
-import { Place } from '../../../data models/place.model';
+import { Place } from '../../../data-models/place.model';
 
 @Component({
   selector: 'app-discover',

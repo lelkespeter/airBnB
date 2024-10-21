@@ -52,7 +52,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/platser/tabs/discover',
+        redirectTo: 'discover',
         pathMatch: 'full',
       },
     ],

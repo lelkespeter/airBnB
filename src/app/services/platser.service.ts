@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Place } from '../data models/place.model';
+import { Place } from '../data-models/place.model';
 
 @Injectable({
   providedIn: 'root',
@@ -34,4 +34,8 @@ export class PlatserService {
   }
 
   constructor() {}
+
+  getPlats(id: string) {
+    return { ...this._places.find((p) => p.id === id) };
+  }
 }
